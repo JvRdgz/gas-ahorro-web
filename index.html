@@ -21,7 +21,12 @@
       <header class="site-header">
         <nav class="nav">
           <a class="brand" href="index.html" aria-label="Ir al inicio">
-            <img src="img/logo_ios.png" alt="Logo Gas Ahorro" />
+            <img
+              src="img/logo_ios.png"
+              alt="Logo Gas Ahorro"
+              data-logo-light="img/logo_ios.png"
+              data-logo-dark="img/logo_ios.png"
+            />
             <span>Gas Ahorro</span>
           </a>
           <div class="nav-links">
@@ -31,6 +36,11 @@
             <a href="#precios">Precios</a>
             <a href="#faq">FAQ</a>
             <a href="#legal">Legal</a>
+            <label class="theme-toggle" aria-label="Cambiar modo claro/oscuro">
+              <input class="theme-toggle-input" type="checkbox" />
+              <span class="theme-toggle-slider" aria-hidden="true"></span>
+              <span class="theme-toggle-label">Modo oscuro</span>
+            </label>
             <a class="cta" href="#descarga">Descargar</a>
           </div>
           <button class="menu-toggle" aria-label="Abrir menú">☰</button>
