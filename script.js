@@ -4,6 +4,7 @@ const siteHeader = document.querySelector(".site-header");
 const themeToggle = document.querySelector(".theme-toggle");
 const themeToggleInput = document.querySelector(".theme-toggle-input");
 const brandLogo = document.querySelector(".brand img");
+const themedShots = document.querySelectorAll("[data-shot-light][data-shot-dark]");
 
 if (menuToggle && navLinks) {
   menuToggle.addEventListener("click", () => {
@@ -21,6 +22,14 @@ if (menuToggle && navLinks) {
 }
 
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+const updateShotImages = (theme) => {
+  themedShots.forEach((shot) => {
+    const target =
+      theme === "dark" ? shot.dataset.shotDark : shot.dataset.shotLight;
+    if (target) shot.src = target;
+  });
+};
 
 const setTheme = (theme) => {
   if (theme === "dark") {
@@ -42,6 +51,7 @@ const setTheme = (theme) => {
     const label = document.querySelector(".theme-toggle-label");
     if (label) label.textContent = "Modo oscuro";
   }
+  updateShotImages(theme);
   localStorage.setItem("theme", theme);
 };
 
