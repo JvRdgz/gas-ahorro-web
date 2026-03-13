@@ -6,7 +6,7 @@
     <title>Gas Ahorro · Ahorra en cada trayecto</title>
     <meta
       name="description"
-      content="Gas Ahorro te muestra precios de gasolineras en tiempo real en España y te guía a la opción más barata en ruta."
+      content="Gas Ahorro te muestra precios de gasolineras en tiempo real en España, sugiere rutas alternativas y te ayuda a evitar peajes para repostar mejor."
     />
     <link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico" />
     <link
@@ -73,8 +73,9 @@
             </h1>
             <p>
               Gas Ahorro compara precios mientras conduces y te muestra las
-              gasolineras más baratas en ruta. Configura tu radio (500 m a 10 km),
-              filtra por combustible y paga menos en cada repostaje.
+              gasolineras más baratas en ruta. Ahora también sugiere rutas
+              alternativas, permite evitar autopistas de peaje y muestra el
+              horario de estaciones cerradas para que decidas mejor cada parada.
             </p>
             <div class="hero-actions">
               <a class="btn primary" href="#descarga">Quiero ahorrar ya</a>
@@ -114,8 +115,8 @@
           </div>
           <div class="pill-row">
             <div class="pill">Ruta con gasolineras a la vista</div>
-            <div class="pill">Filtro por combustible y precio</div>
-            <div class="pill">Modo claro/oscuro automático</div>
+            <div class="pill">Rutas alternativas sin peajes</div>
+            <div class="pill">Horario de estaciones cerradas</div>
           </div>
         </section>
 
@@ -126,7 +127,8 @@
               <h3>Ruta inteligente</h3>
               <p>
                 Añade tu destino y visualiza gasolineras a lo largo del camino.
-                El radio es configurable de 500 m a 10 km.
+                El radio es configurable de 500 m a 10 km y ahora también puedes
+                comparar rutas alternativas antes de decidir.
               </p>
             </article>
             <article class="feature-card reveal">
@@ -154,7 +156,21 @@
               <h3>Solo las más baratas</h3>
               <p>
                 Filtra y quédate solo con las estaciones más económicas en mapa o
-                en ruta.
+                en ruta, con la lógica corregida para mostrar resultados más precisos.
+              </p>
+            </article>
+            <article class="feature-card reveal">
+              <h3>Evita peajes</h3>
+              <p>
+                Activa el filtro para evitar autopistas de peaje y encuentra una
+                ruta más rentable también en el coste del trayecto.
+              </p>
+            </article>
+            <article class="feature-card reveal">
+              <h3>Consulta horarios</h3>
+              <p>
+                Si una gasolinera está cerrada, la app muestra su horario para que
+                sepas cuándo abrirá o si te conviene elegir otra opción.
               </p>
             </article>
             <article class="feature-card reveal">
@@ -173,15 +189,16 @@
             <ol>
               <li>
                 <strong>Configura el filtro.</strong> Elige combustible, radio,
-                si quieres ver precios y si incluyes venta restringida.
+                si quieres ver precios, si incluyes venta restringida y si quieres
+                evitar autopistas de peaje.
               </li>
               <li>
                 <strong>Marca tu destino.</strong> Verás todas las gasolineras de
-                tu ruta y su precio en tiempo real.
+                tu ruta, sus alternativas disponibles y su precio en tiempo real.
               </li>
               <li>
                 <strong>Decide y navega.</strong> Toca la estación que más te
-                conviene y empieza a ahorrar.
+                conviene, revisa si está abierta y empieza a ahorrar.
               </li>
             </ol>
             <div class="how-note">
@@ -272,16 +289,57 @@
           <div class="download-content">
             <h2>Descarga Gas Ahorro y empieza a pagar menos hoy</h2>
             <p>
-              Disponible para iOS y Android. En breve en App Store y Google Play.
+              Disponible para iOS y Android en App Store y Google Play.
             </p>
             <div class="store-buttons">
-              <a class="store-btn" href="#">
-                <span>Disponible pronto</span>
-                <strong>App Store</strong>
+              <a
+                class="store-btn"
+                href="https://apps.apple.com/es/app/gas-ahorro/id6758555135"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  class="store-icon"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M16.736 12.887c.02 2.147 1.884 2.862 1.905 2.871-.016.05-.298 1.022-.984 2.025-.592.867-1.207 1.731-2.175 1.749-.95.018-1.255-.563-2.342-.563-1.088 0-1.428.545-2.325.58-.935.036-1.647-.936-2.244-1.8-1.22-1.765-2.153-4.99-.901-7.165.622-1.08 1.735-1.764 2.943-1.782.916-.018 1.78.617 2.342.617.561 0 1.614-.763 2.72-.651.463.02 1.763.187 2.597 1.408-.067.041-1.548.903-1.536 2.711ZM14.69 7.432c.495-.6.828-1.435.736-2.268-.714.029-1.578.476-2.09 1.076-.46.532-.864 1.383-.755 2.198.797.062 1.612-.407 2.109-1.006Z"
+                  />
+                </svg>
+                <span class="store-copy">
+                  <span>Descargar en</span>
+                  <strong>App Store</strong>
+                </span>
               </a>
-              <a class="store-btn" href="#">
-                <span>Disponible pronto</span>
-                <strong>Google Play</strong>
+              <a
+                class="store-btn"
+                href="https://play.google.com/store/apps/details?id=com.strelok.gasAhorro&pcampaignid=web_share"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  class="store-icon"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M3.509 2.896c-.344.363-.509.898-.509 1.597v15.013c0 .699.165 1.234.509 1.597l.081.073L12.02 12.05v-.1L3.59 2.823l-.081.073Z"
+                  />
+                  <path
+                    d="m14.83 14.86-2.81-2.81v-.1l2.81-2.81.063.036 3.33 1.892c.95.54.95 1.416 0 1.956l-3.33 1.892-.063-.056Z"
+                  />
+                  <path
+                    d="M14.892 14.824 12.02 11.95 3.509 20.46c.544.577 1.441.648 2.45.076l8.933-5.712Z"
+                  />
+                  <path
+                    d="M14.892 9.176 5.959 3.464c-1.009-.572-1.906-.501-2.45.076l8.51 8.51 2.872-2.874Z"
+                  />
+                </svg>
+                <span class="store-copy">
+                  <span>Descargar en</span>
+                  <strong>Google Play</strong>
+                </span>
               </a>
             </div>
           </div>
@@ -312,6 +370,20 @@
               <p>
                 Puedes elegir entre 500 metros y 10 km, o activar el ajuste
                 automático según la longitud de la ruta.
+              </p>
+            </details>
+            <details class="reveal">
+              <summary>¿Puedo evitar autopistas de peaje?</summary>
+              <p>
+                Sí. Puedes activar el filtro para evitar peajes y calcular la ruta
+                mostrando gasolineras que encajen mejor con ese trayecto.
+              </p>
+            </details>
+            <details class="reveal">
+              <summary>¿Qué pasa si una gasolinera está cerrada?</summary>
+              <p>
+                La app indica que está cerrada y muestra su horario disponible para
+                que decidas si esperar o elegir otra parada.
               </p>
             </details>
             <details class="reveal">
@@ -382,6 +454,3 @@
     <script src="script.js"></script>
   </body>
 </html>
-
-
-
