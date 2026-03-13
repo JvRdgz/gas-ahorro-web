@@ -580,6 +580,9 @@ body[data-theme="dark"] .download {
 }
 
 .store-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
   padding: 14px 18px;
   border-radius: 16px;
   background: #fff;
@@ -594,12 +597,28 @@ body[data-theme="dark"] .store-btn {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
 }
 
-.store-btn span {
+.store-icon {
+  width: 26px;
+  height: 26px;
+  flex: 0 0 auto;
+  fill: #0f4a30;
+}
+
+body[data-theme="dark"] .store-icon {
+  fill: #d7f0da;
+}
+
+.store-copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.store-copy span {
   font-size: 0.85rem;
   color: rgba(10, 15, 13, 0.6);
 }
 
-body[data-theme="dark"] .store-btn span {
+body[data-theme="dark"] .store-copy span {
   color: rgba(230, 245, 234, 0.7);
 }
 
