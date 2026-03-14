@@ -11,3 +11,4 @@ next-env.d.ts
 dist
 data/generated/*.json
 !.gitkeep
+.env.example

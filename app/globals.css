@@ -42,6 +42,30 @@ body {
   background:
     radial-gradient(circle at top left, rgba(154, 230, 180, 0.32), transparent 34%),
     linear-gradient(180deg, #f8fbf6 0%, #eef4e9 100%);
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    background 0.25s ease;
+}
+
+body[data-theme="dark"] {
+  --bg: #07110d;
+  --bg-strong: #0d1b15;
+  --surface: rgba(11, 23, 18, 0.88);
+  --surface-strong: #0f1f18;
+  --line: rgba(115, 211, 108, 0.16);
+  --text: #edf5ee;
+  --text-soft: rgba(226, 239, 228, 0.72);
+  --brand-900: #f0f7f1;
+  --brand-800: #9ee0ad;
+  --brand-700: #7fd28f;
+  --brand-600: #58c16f;
+  --brand-500: #42a85c;
+  --shadow-lg: 0 30px 80px rgba(0, 0, 0, 0.32);
+  --shadow-md: 0 18px 50px rgba(0, 0, 0, 0.22);
+  background:
+    radial-gradient(circle at top left, rgba(34, 96, 63, 0.36), transparent 34%),
+    linear-gradient(180deg, #07110d 0%, #0d1812 100%);
 }
 
 a {
@@ -125,6 +149,12 @@ main {
   white-space: nowrap;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
 .button,
 .store-button {
   display: inline-flex;
@@ -156,6 +186,10 @@ main {
 .button-secondary {
   border-color: var(--line);
   background: rgba(255, 255, 255, 0.75);
+}
+
+body[data-theme="dark"] .button-secondary {
+  background: rgba(11, 23, 18, 0.75);
 }
 
 .button-row {
@@ -587,6 +621,60 @@ main {
   font-size: 1.05rem;
 }
 
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+  color: var(--text-soft);
+}
+
+.theme-toggle-slider {
+  position: relative;
+  width: 48px;
+  height: 28px;
+  border-radius: 999px;
+  background: rgba(15, 74, 48, 0.18);
+  border: 1px solid rgba(19, 100, 58, 0.2);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.theme-toggle-knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 6px 14px rgba(10, 15, 13, 0.18);
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.theme-toggle[aria-pressed="true"] .theme-toggle-slider {
+  background: rgba(115, 211, 108, 0.25);
+  border-color: rgba(115, 211, 108, 0.42);
+}
+
+.theme-toggle[aria-pressed="true"] .theme-toggle-knob {
+  transform: translateX(20px);
+  background: #e6f5ea;
+}
+
+.theme-toggle-label {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-soft);
+}
+
 .site-footer {
   padding: 1rem 0 3.5rem;
 }
@@ -621,6 +709,44 @@ main {
 
 .footer-meta {
   color: var(--text-soft);
+}
+
+body[data-theme="dark"] .site-header {
+  border-bottom-color: rgba(115, 211, 108, 0.12);
+  background: rgba(7, 17, 13, 0.82);
+}
+
+body[data-theme="dark"] .footer-grid,
+body[data-theme="dark"] .article-body,
+body[data-theme="dark"] .faq-item,
+body[data-theme="dark"] .store-button {
+  background: rgba(11, 23, 18, 0.82);
+}
+
+body[data-theme="dark"] .footer-links a,
+body[data-theme="dark"] .footer-meta a,
+body[data-theme="dark"] .main-nav a:hover,
+body[data-theme="dark"] .link-card small {
+  color: #9ee0ad;
+}
+
+body[data-theme="dark"] .fuel-toggle {
+  background: rgba(115, 211, 108, 0.12);
+}
+
+body[data-theme="dark"] .fuel-toggle button {
+  color: #9ee0ad;
+}
+
+body[data-theme="dark"] .fuel-toggle .is-active {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: none;
+}
+
+body[data-theme="dark"] .calculator-grid input {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  border-color: rgba(115, 211, 108, 0.14);
 }
 
 .article-layout {
@@ -685,6 +811,11 @@ main {
 @media (max-width: 780px) {
   .header-shell {
     flex-wrap: wrap;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
   }
 
   .main-nav {

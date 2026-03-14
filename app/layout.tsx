@@ -3,9 +3,9 @@ import type { ReactNode } from "react";
 import "leaflet/dist/leaflet.css";
 
 import "./globals.css";
+import "./marketing-home.css";
 
-import { SiteFooter } from "@/components/layout/SiteFooter";
-import { SiteHeader } from "@/components/layout/SiteHeader";
+import { AppChrome } from "@/components/layout/AppChrome";
 import { SchemaScript } from "@/components/seo/SchemaScript";
 import {
   buildMobileApplicationSchema,
@@ -13,6 +13,8 @@ import {
   buildWebSiteSchema,
 } from "@/lib/schema-builders";
 import { siteConfig } from "@/lib/site-config";
+import { ThemeProvider } from "@/components/theme/ThemeProvider";
+import { ThemeScript } from "@/components/theme/ThemeScript";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
@@ -40,8 +42,9 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="es">
-      <body>
+    <html lang="es" suppressHydrationWarning>
+      <body suppressHydrationWarning>
+        <ThemeScript />
         <SchemaScript
           data={[
             buildWebSiteSchema(),
@@ -49,11 +52,9 @@ export default function RootLayout({
             buildMobileApplicationSchema(),
           ]}
         />
-        <div className="site-shell">
-          <SiteHeader />
-          <main>{children}</main>
-          <SiteFooter />
-        </div>
+        <ThemeProvider>
+          <AppChrome>{children}</AppChrome>
+        </ThemeProvider>
       </body>
     </html>
   );
