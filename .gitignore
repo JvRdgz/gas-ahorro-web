@@ -1,3 +1,13 @@
 img/Dark/.DS_Store
 img/Light/.DS_Store
 img/.DS_Store
+public/.DS_Store
+public/img/.DS_Store
+public/img/Dark/.DS_Store
+public/img/Light/.DS_Store
+node_modules
+.next
+next-env.d.ts
+dist
+data/generated/*.json
+!.gitkeep
