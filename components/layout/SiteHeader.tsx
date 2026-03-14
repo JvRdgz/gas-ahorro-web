@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
+import { ThemeToggle } from "@/components/theme/ThemeToggle";
 import { siteConfig } from "@/lib/site-config";
 
 const navigation = [
@@ -37,14 +40,17 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <a
-          className="button button-primary header-download"
-          href={siteConfig.playStoreUrl}
-          target="_blank"
-          rel="noreferrer"
-        >
-          Descargar app
-        </a>
+        <div className="header-actions">
+          <ThemeToggle />
+          <a
+            className="button button-primary header-download"
+            href={siteConfig.playStoreUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Descargar app
+          </a>
+        </div>
       </div>
     </header>
   );
