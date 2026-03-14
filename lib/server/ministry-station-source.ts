@@ -163,9 +163,9 @@ async function fetchLiveStations() {
     headers: {
       Accept: "application/json",
     },
-    next: {
-      revalidate: runtimeConfig.stationRevalidateSeconds,
-    },
+    // This payload is large enough that Next/Vercel fetch-cache writes can time out.
+    // We already keep an in-memory snapshot per runtime, so bypass framework fetch cache.
+    cache: "no-store",
   });
 
   if (!response.ok) {
